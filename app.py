@@ -12,7 +12,7 @@ PRIVATE_KEY_PATH = os.environ.get("PRIVATE_KEY_PATH", "/root/.ssh/id_rsa")
 
 
 SERVERS = {
-    "kb-web-prod-1": "10.0.0.120",
+    "kb-web-prod-1": "10.0.0.d120",
     "kb-web-prod-2": "10.0.0.122",
     "kb-dash-prod-1": "10.0.0.124",
     "kb-dash-prod-2": "10.0.0.126",
@@ -30,7 +30,7 @@ def execute_ssh_command(host, command):
         client = paramiko.SSHClient()
         client.load_system_host_keys()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        client.connect(host, username='your_ssh_user', key_filename=PRIVATE_KEY_PATH)
+        client.connect(host, username='root', key_filename=PRIVATE_KEY_PATH)
         
         stdin, stdout, stderr = client.exec_command(command)
         result = stdout.read().decode('utf-8')
