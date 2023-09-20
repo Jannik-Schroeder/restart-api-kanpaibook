@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  webhook-handler:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - API_KEY=YOUR_SECRET_API_KEY
+      - PRIVATE_KEY_PATH=/path/in/container/to/ssh/key
+    volumes:
+      - /path/on/host/to/ssh/key:/path/in/container/to/ssh/key
