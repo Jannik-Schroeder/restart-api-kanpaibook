@@ -2,9 +2,7 @@ version: '3.8'
 
 services:
   webhook-handler:
-    build: 
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/jannik-schroeder/restart-api-kanpaibook:master
     ports:
       - "5000:5000"
     environment:
