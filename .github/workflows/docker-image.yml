@@ -15,6 +15,7 @@ on:
       - main
       - dev
       - docker
+      - master
   workflow_dispatch:
 
 env:
