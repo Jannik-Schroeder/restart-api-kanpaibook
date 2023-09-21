@@ -12,7 +12,7 @@ PRIVATE_KEY_PATH = os.environ.get("PRIVATE_KEY_PATH", "/root/.ssh/id_rsa")
 
 
 SERVERS = {
-    "kb-web-prod-1": "10.0.0.d120",
+    "kb-web-prod-1": "10.0.0.120",
     "kb-web-prod-2": "10.0.0.122",
     "kb-dash-prod-1": "10.0.0.124",
     "kb-dash-prod-2": "10.0.0.126",
