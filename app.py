@@ -49,7 +49,7 @@ def webhook_handler(server_name):
     if server_name not in SERVERS:
         return jsonify(error="Invalid server name"), 400
 
-    output = execute_ssh_command(SERVERS[server_name], 'cd /root/ && docker compose pull && docker compose up -d && docker image prune -f &&')
+    output = execute_ssh_command(SERVERS[server_name], 'cd /root/ && docker compose pull && docker compose up -d && docker image prune -f')
     return jsonify(output=output)
 
 if __name__ == '__main__':
